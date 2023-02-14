@@ -4,7 +4,7 @@ WORKDIR /react-app
 COPY react-app/. .
 
 # You have to set this because it should be set during build time.
-ENV REACT_APP_BASE_URL=<Your-REACT_APP_BASE_URL-here>
+ENV REACT_APP_BASE_URL=https://develp.onrender.com
 ENV REACT_APP_GEOCODE_API_KEY=AIzaSyBiQq5Z8o8i2sbzKNIitbGVQ27bWWuw23I
 
 # Build our React App
