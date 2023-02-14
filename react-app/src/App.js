@@ -42,9 +42,9 @@ function App() {
         <ProtectedRoute path='/search/:params'>
           <SearchPage />
         </ProtectedRoute>
-        <Route>
+        {/* <Route>
           <Error />
-        </Route>
+        </Route> */}
       </Switch>
     </BrowserRouter>
 
