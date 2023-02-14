@@ -6,7 +6,7 @@ import { getSkillsThunk } from '../../store/skills';
 
 
 const ProtectedRoute = props => {
-  const user = useSelector(state => state.session.user)
+  const user = useSelector(state => state?.session.user)
   const dispatch = useDispatch();
 
   useEffect(() => {

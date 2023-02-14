@@ -1,9 +1,13 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './Developer.css'
 
 function DevelopersList() {
+
+  const sessionUser = useSelector((state) => state.session.user);
+  
   const developers = useSelector((state) => state?.developers);
 
   const devsComponents = Object.values(developers)?.map((dev) => {
@@ -22,10 +26,16 @@ function DevelopersList() {
 
   return (
     <>
-      <h1 className='developers-title'>Developers </h1>
-      <div className='Dev-list'>
-        <div>{devsComponents}</div>
-      </div>
+    {!sessionUser ?
+
+      (<Redirect to ='/' />) : (
+      <>
+        <h1 className='developers-title'>Developers </h1>
+        <div className='Dev-list'>
+          <div>{devsComponents}</div>
+        </div>
+      </>
+      )}
     </>
   );
 }
