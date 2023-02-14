@@ -33,9 +33,9 @@ function App() {
         <Route path='/' exact={true} >
           <SplashPage/>
         </Route>
-        <Route path='/developers' exact={true} >
+        <ProtectedRoute path='/developers' exact={true} >
           <DevelopersList title='Developers List'/>
-        </Route>
+        </ProtectedRoute>
         <ProtectedRoute path='/developers/:id' exact={true} >
           <Developer user={sessionUser}/>
         </ProtectedRoute>
