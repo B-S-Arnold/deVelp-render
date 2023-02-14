@@ -20,8 +20,8 @@ const ratingEval = (array) => {
 
 function Developer({ user }) {
   const { id } = useParams();
-  const developer = useSelector(state => state.developers[id])
-  const allReviews = useSelector(state => state.reviews)
+  const developer = useSelector(state => state?.developers[id])
+  const allReviews = useSelector(state => state?.reviews)
   const [latitude, setLatitude] = useState("")
   const [longitude, setLongitude] = useState("")
 

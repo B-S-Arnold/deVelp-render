@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './Developer.css'
 
 function DevelopersList() {
-  const developers = useSelector((state) => state.developers);
+  const developers = useSelector((state) => state?.developers);
 
   const devsComponents = Object.values(developers)?.map((dev) => {
     return (
