@@ -6,6 +6,8 @@ from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
 app = Flask(__name__, static_folder='../react-app/build', static_url_path='/')
 
+# HERE????
+
 from app.config import Config
 app.config.from_object(Config)
 
