@@ -40,6 +40,8 @@ function Developer({ user }) {
 
 
   if (developer?.city) {
+    console.log(process.env.DATABASE_URL, process.env.SECRET_KEY)
+
     Geocode.fromAddress(`${developer.city}, ${developer.state}`).then(
       (response) => {
         const { lat, lng } = response.results[0].geometry.location;
